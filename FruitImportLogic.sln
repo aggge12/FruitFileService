@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FruitImportService", "Fruit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportTestApplication", "ImportTestApplication\ImportTestApplication.csproj", "{BA864C37-E268-4292-893B-AD76F4E706AA}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ServiceSetup", "ServiceSetup\ServiceSetup.vdproj", "{1FD23622-C34F-4D08-B5CD-9A036A454F94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,8 @@ Global
 		{BA864C37-E268-4292-893B-AD76F4E706AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA864C37-E268-4292-893B-AD76F4E706AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA864C37-E268-4292-893B-AD76F4E706AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FD23622-C34F-4D08-B5CD-9A036A454F94}.Debug|Any CPU.ActiveCfg = Debug
+		{1FD23622-C34F-4D08-B5CD-9A036A454F94}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

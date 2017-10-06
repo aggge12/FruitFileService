@@ -40,7 +40,7 @@ namespace FruitImportLogic
 
         public string MakeImportChanges()
         {
-            string logstring = "";
+            string logstring = ""; // logstring is used to return what's supposed to be logged by the main class.
             try
             {
                 DirectoryInfo myFileList = new DirectoryInfo(_readPath);
@@ -51,7 +51,7 @@ namespace FruitImportLogic
                 }
                 else
                 {
-                    foreach (FileInfo item in filer)
+                    foreach (FileInfo item in filer) // loop through files in directory
                     {
                         if (item.Name.Substring(0, fileIgnore.Length) != fileIgnore)
                         {
@@ -157,7 +157,7 @@ namespace FruitImportLogic
             try
             {
                
-                item.MoveTo(_movePath +"\\"+DateTime.Now.Hour + "_" + DateTime.Now.Minute + "_" + DateTime.Now.Second + "_" + item.Name);
+                item.MoveTo(_movePath +"\\"+DateTime.Now.Hour + "_" + DateTime.Now.Minute + "_" + DateTime.Now.Second + "_" + item.Name); // moves file and adds date to the name
                 return Environment.NewLine + item.Name + " moved to: " + _movePath;
             }
             catch (Exception ex)
