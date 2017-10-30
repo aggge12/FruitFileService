@@ -76,7 +76,7 @@ namespace FruitImportLogic
                                     ProcessedIncomingTransactions transaction = new ProcessedIncomingTransactions();
                                     foreach (XmlElement element in doc.DocumentElement.ChildNodes)
                                     {
-                                        if (element.Name == "Fruit" && element.HasChildNodes && element.HasAttributes && element.Attributes[0].Name == "ID")
+                                        if (element.Name == "Fruit" && element.HasChildNodes && element.HasAttributes && element.Attributes[0].Name == "ID") // the file needs to have a fruit element
                                         {
                                             string fruitID = element.Attributes[0].Value;
 
@@ -94,13 +94,13 @@ namespace FruitImportLogic
 
                                             }
                                         }
-                                        if (element.Name == "Supplier" && element.Attributes[0].Name == "ID")
+                                        if (element.Name == "Supplier" && element.Attributes[0].Name == "ID") // it also should have a supplier but it is not required
                                         {
                                             transaction.Supplier = int.Parse(element.Attributes[0].Value);
                                         }
                                     }
 
-                                    if (transactionContent.Count > 0)
+                                    if (transactionContent.Count > 0) // if fruits were added to the transactions list
                                     {
                                         TransactionWithContent transactionWithContent = new TransactionWithContent(transaction, transactionContent);
                                         // POST TO API
@@ -134,7 +134,7 @@ namespace FruitImportLogic
                             }
                             catch (Exception ex)
                             {
-                                File.Move(item.FullName, Path.Combine(item.DirectoryName, fileIgnore + item.Name));
+                                File.Move(item.FullName, Path.Combine(item.DirectoryName, fileIgnore + item.Name)); // set file to ignore
                                 throw new Exception(ex.Message);
                             }
                         }
